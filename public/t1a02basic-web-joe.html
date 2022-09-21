@@ -52,12 +52,12 @@ then make a link and image table with border = 0<br><br><br>
 
 Load an image and get it to move 10 pixels to the left using the button below<br>
 
-<image id="file:///C:/Users/824670/Downloads/a.jfif" src="" style="position:relative; left:0; top:0; width:50; height:50; "><br>
-  
-  <input type=button value="Go Left" onclick="{
-                                               document.getElementById('myImage01').style.Left = '200px'
-                                               document.getElementById('myDiv01').innerHTML = 'It went right'
-                                               }">
+<image id="myImage01" src="https://th.bing.com/th/id/OIP.ituRBGTQgyoCDrJUzT87LQHaEy?pid=ImgDet&rs=1" style="position: relative; left: 0; top:0; width: 100 height: 100; "> <br> </image>
+
+<input type="button" value="Go Left" onclick="{
+document.getElementById('myImage01').style.left = '200px'
+document.getById('myDiv01').innerHTML = 'It went left i think'
+}"> 
   
   
   <div id="myDiv01">...</div>
