@@ -20,10 +20,33 @@ I do CSS inside the tag. It overpowers all other methods<br>
 
 <b > This is bold</b><br>
 <b id="myB1" style="color:#00ff00; background-Color:blue; "> This is bold</b>
-<input type=button value=Change onclick="{
-document.elementById('myB1').style.color = 'red'
-document.elementById('myB1').style.backgroundColor = 'yellow'
-}"><br>
+<input type="button" value=Change onClick="{
+document.getElementById('bold01').style.color = 'red' 
+document.getElementById('bold01').style.backgroundColor = 'yellow' 
+}"> 
+<input type="button" value="Reset color" onClick="{
+document.getElementById('bold01').style.backgroundColor = 'gray' 
+document.getElementById('bold01').style.color = 'blue'
+}">
+
+<br>
+<br>
+
+
+<input type="button" value="change background color" onClick="{
+document.getElementById('mainBody').style.backgroundColor = 'red' 
+}">
+
+<br>
+
+
+
+
+<br>
+
+<input type="button" value="reset background color" onClick="{
+document.getElementById('mainBody').style.backgroundColor = 'gray' 
+}">
 
 
 <textarea style="position:relative; left:0; top:0; width:200; height:50; ">
