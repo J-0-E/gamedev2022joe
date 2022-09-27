@@ -1,0 +1,86 @@
+<a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br>
+
+<br>
+
+<input type="text" id="myTextIn01" value="Stuff written here" size="30">  
+    
+<input id="myButton123" type="button" value="Input / Output" onclick="{
+      document.getElementById('myDiv123').innerHTML = document.getElementById('myTextIn01').value // note: use value not innerHTML                                                    
+}"><br><br>
+
+<div id='myDiv123'>...</div><br>
+
+<br>
+
+<input type="text" id="myTextIn1" value="3.45" size="30">  + <input type="text" id="myTextIn2" value="6.78" size="30"> 
+
+<input id="myButton124" type="button" value="Add the numbers" onclick="{
+
+   var my1 = document.getElementById('myTextIn1').value  
+   var my2 = document.getElementById('myTextIn2').value  
+   document.getElementById('myDiv124').innerHTML =   'Numbers added as strings ' +  my1 + ' + ' +  my2 + ' = ' +  (my1 + my2)  + '<br>'   
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as integers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseInt(my1) + parseInt(my2))  + '<br>'   
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as rounded integers ' +  my1 + ' + ' +  my2 + ' = ' +  (Math.round(my1) + Math.round(my2))  + '<br>'                                                      
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as floating point (decimal) numbers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseFloat(my1) + parseFloat(my2))  + '<br>'                                         
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added using *1 trick ' +  my1 + ' + ' +  my2 + ' = ' +  (my1*1 + my2*1)  + '<br>'                                                       
+                                                             
+                                                              
+}"><br><br>
+
+<div id='myDiv124'>...</div><br>
+
+<br> 
+  <br>
+  
+
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
+  
+  
+  
+  </style> 
+
+</body>
