@@ -55,7 +55,7 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg04') ){
       document.all.myText01.value = 'You hit myImg04 and you win the game!'  
-       alert('You Win, now go to the next level')
+       alert('You Win, now go to google for no reason')
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://www.google.ca'
    }
@@ -86,7 +86,7 @@ function myCheckHit(){
 
 
 
-<h1 align=center><font color=Yellow>T4A05 Template with WASD by Fred</font></h1>
+<h1 align=center><font color=Yellow>T4A05 Template with WASD by Joe</font></h1>
 
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
 
@@ -107,6 +107,11 @@ function myCheckHit(){
   myCheckHit()     // checks for all collisions
 }">
 
+   <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+   
 <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
