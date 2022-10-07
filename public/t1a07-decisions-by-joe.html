@@ -1,0 +1,96 @@
+<a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a>
+Version 0.0.3
+
+<h2align=center>t1a07-decision-by-joe.html</h2>
+
+<a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decisions if ... else statments
+  Javascript innerHTML value by Joe</a><br>
+Note: ! = Not, && = AND, ||	 = OR
+
+<h4> Example input output code</h4>
+<pre>
+let myHour = 20
+if (myHour < 18) {
+let myGreeting = 'Good Day';
+}
+</pre>
+
+<h4> Example working code</h4>
+
+<input id="myNum01" type=number value="4" ><br>
+
+<input type=button value="Simple if Statement for Decision Making" onclick="{ 
+                                                                            let myIn01 = parseFloat(document.getElementById('myNum01').value)
+                                                                            if (myIn01 >=3){
+                                                                            document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+                                                                            }
+                                                                            }">
+                                                                            
+                                                                            <input type=button value="if...Else" onclick="{
+                                                                                                                          let myIn01 = parseFloat(document.getElementById('myNum01').value)
+                                                                                                                          if (myIn01 >=3){
+                                                                                                                          document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+                                                                                                                          } else {
+                                                                                                                          document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+                                                                                                                          }">
+                                                                                                                          
+                                                                                                                          <input type=button value="Complex if" onclick="{
+                                                                                                                          let my In01 = pareseFloat(document.getElementById('myNum01').value)
+                                                                                                                          if ((myIn01 != 3 || myIn01 > -3)  && myIn01 <=100 ){
+                                                                                                                          document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
+                                                                                                                          } else {
+                                                                                                                          document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'
+                                                                                                                          }">
+                                                                                                                          
+                                                                                                                          
+                                                                                                                          <div id="myDiv01">...</div>
+                                                                                                                          
+                                                                                                                          <br> 
+  <br>
+  
+
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
