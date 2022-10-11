@@ -15,12 +15,37 @@ For Global variables Mr. Ellis prefers to use document.myVarName
 
 <h4> Example working code</h4>
 
-<input id="myText01" type=text value="The dog " ><br>
+<input id="myText01" type=text value="The fox " ><br>
 
-<input type=button value="Show Variable" onclick="{
+<input type=button value="Show The fox" onclick="{
                                                   document.getElementById('myDiv01').innerHTML =
                                                   document.getElementById('myText01').value
                                                   }"><br>
+<input id="myText01" type=text value="jumped " ><br>
+
+<input type=button value="jumped " onclick="{
+                                                  document.getElementById('myDiv01').innerHTML =
+                                                  document.getElementById('myText01').value
+                                                  }"><br>
+<input id="myText01" type=text value="over " ><br>
+
+<input type=button value="Show over" onclick="{
+                                                  document.getElementById('myDiv01').innerHTML =
+                                                  document.getElementById('myText01').value
+                                                  }"><br>
+<input id="myText01" type=text value="the lazy" ><br>
+
+<input type=button value="Show the lazy" onclick="{
+                                                  document.getElementById('myDiv01').innerHTML =
+                                                  document.getElementById('myText01').value
+                                                  }"><br>
+<input id="myText01" type=text value="dog " ><br>
+
+<input type=button value="Show dog" onclick="{
+                                                  document.getElementById('myDiv01').innerHTML =
+                                                  document.getElementById('myText01').value
+                                                  }"><br>
+
 
 <div id="myDiv01">...</div>
 
