@@ -6,7 +6,7 @@
 
    let myGlobalX = 0
    let myClock
-   let myScore = 10
+   let myScore = 9999
 
 
    // global functions here
@@ -78,6 +78,12 @@ function myCheckHit(){
    if (event.key == 's') {   // s = go down
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
    }  
+   if (event.key == 'a') {   // s = go left
+      document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'
+   } 
+   if (event.key == 'w') {   // s = go up
+      document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 + 'px'
+   }                                                                                                                                                                                                          
    // put more here
   myCheckHit()     // checks for all collisions
 }">
@@ -107,10 +113,15 @@ function myCheckHit(){
   myCheckHit()     // checks for all collisions
 }">
 
-   <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
+   
+<input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">   
    
 <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
