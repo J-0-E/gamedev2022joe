@@ -33,14 +33,14 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg02'  
+      document.all.myText01.value = 'You used cut but it failed!'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You used cut but it failed!'  
       myScore -= 1
    }   
    
@@ -54,8 +54,8 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg04') ){
-      document.all.myText01.value = 'You hit myImg04 and you win the game!'  
-       alert('You obtained a greatball!, now click OK because I told you to')
+      document.all.myText01.value = 'You obtained a Greatball!'  
+       alert('You obtained a Greatball!, now click OK because I told you to')
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://youtu.be/dQw4w9WgXcQ'
    }
@@ -139,4 +139,44 @@ function myCheckHit(){
    <br>
    
    <style>
-   background-image: url(https://th.bing.com/th/id/R.459f002ae01bd08b37ba16a06d3ca3d1?rik=qaktk9nQX0gCZQ&riu=http%3a%2f%2fvignette3.wikia.nocookie.net%2fpokemoncrater%2fimages%2fb%2fbc%2fGrass_Type.jpg%2frevision%2flatest%3fcb%3d20100315205316&ehk=IS0zx%2b7i%2bUsDNnEei5g2uViY93TLtTvg2Nycid%2bmT%2fs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);   
+   @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://th.bing.com/th/id/R.459f002ae01bd08b37ba16a06d3ca3d1?rik=qaktk9nQX0gCZQ&riu=http%3a%2f%2fvignette3.wikia.nocookie.net%2fpokemoncrater%2fimages%2fb%2fbc%2fGrass_Type.jpg%2frevision%2flatest%3fcb%3d20100315205316&ehk=IS0zx%2b7i%2bUsDNnEei5g2uViY93TLtTvg2Nycid%2bmT%2fs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }   
