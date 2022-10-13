@@ -38,7 +38,7 @@ function myCheckHit(){
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
-       //alert('you lose')
+       //alert('you died')
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You used cut but it failed!'  
       myScore -= 1
@@ -47,7 +47,7 @@ function myCheckHit(){
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'You Lose scrore at zero!'  
-    alert('Sorry you lose')
+    alert('You died')
     location.reload()
    }
 
