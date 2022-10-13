@@ -49,8 +49,18 @@ let myGreeting = 'Whats up';
                                                                                                                           <br> 
   <br>
   
-
-
+<h5> DO YOU LIKE PINEAPPLE ON PIZZA </h5>
+<br>
+<input type=textbox value="Yes or No" onclick="{
+                                                let myIn02 = parseFloat(document.getElementById('myNum02').value)
+                                                if (myIn02 >=Yes){
+                                                document.getElementById('myDiv02').innerHTML = ' You are cool '
+                                                } else {
+                                                document.getElementById('myDiv02').innerHTML = ' You are not cool '}
+                                                }">
+                                           
+                                            <div id="myDiv02">...</div>
+                                                                                             
 <style> 
 
   
