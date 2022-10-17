@@ -19,10 +19,22 @@ function myHitOther(my1,my2){
    right2  = left2 + parseInt(document.getElementById(my2).style.width)
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   left3   = parseInt(document.getElementById(my3).style.right)
+   right3  = right3 + parseInt(document.getElementById(my3).style.width)
+   top3    = parseInt(document.getElementById(my3).style.bottom)   
+   bottom3 = bottom3   + parseInt(document.getElementById(my3).style.height)
+   left4   = parseInt(document.getElementById(my4).style.right)
+   right4  = right4 + parseInt(document.getElementById(my4).style.width)
+   top4    = parseInt(document.getElementById(my4).style.bottom)   
+   bottom4 = bottom4   + parseInt(document.getElementById(my4).style.height)
    if ((right1  >=  left2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
-       (top1    <=  bottom2) ){
+       (top1    <=  bottom2) &&
+       (right3  >=  left4  ) &&      	   
+       (bottom3 >=  top4   ) &&
+       (left3   <=  right4 ) &&
+       (top3    <=  bottom4)){
        return true
    }
 }
@@ -135,6 +147,6 @@ function myCheckHit(){
 <img id="myImg02" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc5e9c50-a07d-40fa-9e0d-9f5c7f4378f0/db8l6ab-e137a10e-a718-41dd-ba0c-f4537e40d0b5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjNWU5YzUwLWEwN2QtNDBmYS05ZTBkLTlmNWM3ZjQzNzhmMFwvZGI4bDZhYi1lMTM3YTEwZS1hNzE4LTQxZGQtYmEwYy1mNDUzN2U0MGQwYjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._bYretKmnKmuxv7Zg-GkHck6YJJmoq5yRv9vChqqB8w"  style="position:absolute; width:100px; height:80px; left:350px; top:190px;">
 <img id="myImg03" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc5e9c50-a07d-40fa-9e0d-9f5c7f4378f0/db8l6ab-e137a10e-a718-41dd-ba0c-f4537e40d0b5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjNWU5YzUwLWEwN2QtNDBmYS05ZTBkLTlmNWM3ZjQzNzhmMFwvZGI4bDZhYi1lMTM3YTEwZS1hNzE4LTQxZGQtYmEwYy1mNDUzN2U0MGQwYjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._bYretKmnKmuxv7Zg-GkHck6YJJmoq5yRv9vChqqB8w"  style="position:absolute; width:100px; height:80px; left:500px; top:190px;">
 <img id="myImg04" src="https://tl.vhv.rs/dpng/s/512-5124548_pokemon-ball-8-bit-png-download-pokeball-pixel.png"  style="position:absolute; width:100px; height:80px; left:500px; top:400px;">
-<img id="myBackground01.jpg" src="https://th.bing.com/th/id/R.459f002ae01bd08b37ba16a06d3ca3d1?rik=qaktk9nQX0gCZQ&riu=http%3a%2f%2fvignette3.wikia.nocookie.net%2fpokemoncrater%2fimages%2fb%2fbc%2fGrass_Type.jpg%2frevision%2flatest%3fcb%3d20100315205316&ehk=IS0zx%2b7i%2bUsDNnEei5g2uViY93TLtTvg2Nycid%2bmT%2fs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+<img id="myBackground01.jpg" src="https://th.bing.com/th/id/R.459f002ae01bd08b37ba16a06d3ca3d1?rik=qaktk9nQX0gCZQ&riu=http%3a%2f%2fvignette3.wikia.nocookie.net%2fpokemoncrater%2fimages%2fb%2fbc%2fGrass_Type.jpg%2frevision%2flatest%3fcb%3d20100315205316&ehk=IS0zx%2b7i%2bUsDNnEei5g2uViY93TLtTvg2Nycid%2bmT%2fs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" style="position:absolute; width:100px; height:80px; left:500px; top:400px;">
 
    
