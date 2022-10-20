@@ -1,0 +1,79 @@
+<script>
+  
+  function myExampleFunction(){
+    let myIn01 = parseInt(document.getElementById('myText01').value)
+    let mySum = myIn01
+    let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
+    return myReply
+    
+  }
+  
+</script>
+
+<i><a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br></i>
+<br>
+Version 0.0.5
+
+<h2> T1A09-Functions-By-Joe.html</h2>
+
+<a href="https://wwww.w3schools.com/js/js_functions.asp">
+  Good reference to Javascript functions</a><br>
+
+Functions are used to sesibly organize code. Then they are "Called" elsewhere.
+Information can also be passed to functions ( that's more advaced).
+
+<h4> Example working code</h4>
+
+
+<input type=text if="myText01" value="3"><br>
+
+<input type=button value="Function Example" onClick="{
+                                                     document.getElementById('myDiv01').innerHTML = myExampleFunction()
+                                                     }">
+
+<div id="myDiv01">...</div>
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
