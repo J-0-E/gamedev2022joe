@@ -63,10 +63,10 @@ function updateGameArea() {
     myGameArea.clear();
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;    
-    if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
-    if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; }
-    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1; }
-    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1; }
+    if (myGameArea.keys && myGameArea.keys[65]) {myGamePiece.speedX = -1; }
+    if (myGameArea.keys && myGameArea.keys[87]) {myGamePiece.speedX = 1; }
+    if (myGameArea.keys && myGameArea.keys[68]) {myGamePiece.speedY = -1; }
+    if (myGameArea.keys && myGameArea.keys[83]) {myGamePiece.speedY = 1; }
     myGamePiece.newPos();    
     myGamePiece.update();
 }
