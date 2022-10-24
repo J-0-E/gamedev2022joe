@@ -32,8 +32,27 @@ Events are HTML code that activates Javascript code
                                           document.getElementById('myB01').innerHTML = 'Mwhahahaha you just activated my trap card!'
                                           }" > Hover over here!</b>
 
+<input type="text" onkeydown="myFunction()">
 
+<script>
+function myFunction() {
+  location = 'https://youtu.be/dQw4w9WgXcQ'
+}
+</script>
 
+<br>
+
+<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+
+<script>
+function keydownFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+
+function keyupFunction() {
+  document.getElementById("demo").style.backgroundColor = "green";
+}
+</script>
 <br>
 
 You do at least 8 other events:<br>
