@@ -1,0 +1,86 @@
+<a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br>
+Version 0.0.2
+
+<h2> T1A10-Events-By-Joe.html</h2>
+
+<a href="https://way2tutorial.com/html/html5_events_handler_list.php">Good reference to HTML Events</a><br>
+
+Events are HTML code that activates Javascript code
+
+<h4> Example Functions cpde</h4>
+<pre>
+&lt input type=button value="Example onClick" onClick="{
+   alert('hi')
+}" &gt
+</pre>
+
+<h4> Example working code</h4>
+
+
+<input type=text id="myText01" value="3"><br>
+
+<input type=button value="Example onClick" onClick="{
+                                                    document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+                                                    }">
+
+<div id="myDiv01">...</div>
+
+
+<b id="myB01" onMouseOut="{
+                          document.getElementById('myB01').innerHTML = 'This is bold'
+                          }" onMouseOver="{
+                                          document.getElementById('myB01').innerHTML = 'This is cool'
+                                          }" > This is bold</b>
+
+
+
+<br>
+
+You do at least 8 other events:<br>
+onClick, onDbClick, onChange, onBlue, onFocus, onMouseMove, onTouch,
+onKeyDown, onKeyPress, onDragStart, onTouchStart, onTouchEnd, onTouchMove
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
