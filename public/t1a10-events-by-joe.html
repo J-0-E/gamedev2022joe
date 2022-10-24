@@ -17,13 +17,18 @@ Events are HTML code that activates Javascript code
 <h4> Example working code</h4>
 
 
-<input type=text id="myText01" value="100"><br>
+<input type=text id="myText01" value="Click for pig"><br>
+
 
 <input type=button value="Example onClick" onClick="{
-                                                    document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+                                                    location = 'https://youtu.be/jWfOxV7mvIs'
+                                                    document.getElementById('myDiv05').innerHTML =
+                                                    document.getElementById('myText05').value
                                                     }">
 
-<div id="myDiv01">...</div>
+<input id="myText05" value="Now you seen pig"><br>
+<div id="myDiv05">...</div>
+
 
 
 <b id="myB01" onMouseOut="{
