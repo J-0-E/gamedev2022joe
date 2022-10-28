@@ -85,6 +85,50 @@ Max Array Entry: <input type=text id="myText01" value="51"><br>
                                                     }">
 <div id="myDiv01">...</div>
 
+Max Array Entry: <input type=text id="myText02" value="5"><br>
+
+<input type=button value="Five Best Fruits" onClick="{
+                                                    let myTemp = document.getElementById('myText02').value
+                                                    let mySum = ''
+                                                    document.getElementById('myDiv02').innerHTML = ' '
+                                                    
+                                                    myAArray = new AArray()
+                                                    myAArray[0] = 'Watermelon'
+                                                    myAArray[1] = 'Kiwi'
+                                                    myAArray[2] = 'Strayberry'
+                                                    myAArray[3] = 'Blueberry'
+                                                    myAArray[4] = 'Raspberry'
+                                                    myAArray[5] = 'Mango'
+                                                    
+                                                    for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+                                                    mySum += 'Loop #: ' + myLoop + ' array entry: ' + myAArray[myLoop] +'<br>'
+                                                    }
+                                                    document.getElementById('myDiv02').innerHTML = mySum
+                                                    }">
+<div id="myDiv02">...</div>
+
+Max Array Entry: <input type=text id="myText03" value="5"><br>
+
+<input type=button value="Five Best DC Superheros" onClick="{
+                                                    let myTemp = document.getElementById('myText03').value
+                                                    let mySum = ''
+                                                    document.getElementById('myDiv03').innerHTML = ' '
+                                                    
+                                                    myAray = new Aray()
+                                                    myAray[0] = 'Batman'
+                                                    myAray[1] = 'Still Batman'
+                                                    myAray[2] = 'Always Batman'
+                                                    myAray[3] = 'Forever Batman'
+                                                    myAray[4] = 'Bruce Wayne'
+                                                    myAray[5] = 'Alfred'
+                                                    
+                                                    for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+                                                    mySum += 'Loop #: ' + myLoop + ' array entry: ' + myAray[myLoop] +'<br>'
+                                                    }
+                                                    document.getElementById('myDiv03').innerHTML = mySum
+                                                    }">
+<div id="myDiv03">...</div>
+
 
 <br>
 
