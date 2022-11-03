@@ -6,7 +6,7 @@
 
    let myGlobalX = 0
    let myClock
-   let myScore = 3
+   let myScore = 10
 
 
    // global functions here
@@ -22,7 +22,7 @@ function myHitOther(my1,my2){
    if ((right1  >=  left2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
-       (top1    <=  bottom2)){
+       (top1    <=  bottom2) ){
        return true
    }
 }
@@ -33,31 +33,31 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You used cut but it failed!'  
+      document.all.myText01.value = 'You hit myImg02'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
-       //alert('you died')
+       //alert('you lose')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You used cut but it failed!'  
+      document.all.myText01.value = 'You hit myImg03'  
       myScore -= 1
    }   
    
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'You Lose scrore at zero!'  
-    alert('You died')
+    alert('Sorry you lose')
     location.reload()
    }
 
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg04') ){
-      document.all.myText01.value = 'You obtained a Greatball!'  
-       alert('You obtained a Greatball!, now click OK because I told you to')
+      document.all.myText01.value = 'You hit myImg04 and you win the game!'  
+       alert('You Win, now go to the next level')
       document.getElementById('myImg01').style.left = '20px'
-      location = 'https://youtu.be/dQw4w9WgXcQ'
+      location = 'https://www.google.ca'
    }
 
    // more if statements here
@@ -79,11 +79,11 @@ function myCheckHit(){
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
    }  
    if (event.key == 'a') {   // a = go left
-    document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + -10 + 'px'
-   } 
-   if (event.key == 'w') {   // w = go up
-   document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + -10 + 'px'
-   }                                                                                                                                                                                                          
+      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
+      }
+      if (event.key == 'w') {   // w = go up
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
+      }
    // put more here
   myCheckHit()     // checks for all collisions
 }">
@@ -92,9 +92,9 @@ function myCheckHit(){
 
 
 
-<h1 align=center><font color=Black>T4A05 Template with WASD by Joe</font></h1>
+<h1 align=center><font color=Yellow>T4A05 Template with WASD by Fred</font></h1>
 
-<input id="myText01" type=text value="" size=50 placeholder="Amount of Lives"><br>
+<input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
@@ -109,22 +109,20 @@ function myCheckHit(){
 
 
 <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
 
-<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + -10 + 'px'
+<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
-   
-<input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + -10 + 'px'
+<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
   myCheckHit()     // checks for all collisions
-}">   
-   
-<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+}"><br><br>
+<input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
 
