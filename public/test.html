@@ -38,7 +38,7 @@ function myCheckHit(){
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
-       //alert('you lose')
+       //alert('You used Cut but failed')
       document.getElementById('myImg01').style.left = '20px'
       document.all.myText01.value = 'You hit myImg03'  
       myScore -= 1
@@ -54,8 +54,8 @@ function myCheckHit(){
    // YOU WIN and go to next level!
 
    if ( myHitOther('myImg01','myImg04') ){
-      document.all.myText01.value = 'You hit myImg04 and you win the game!'  
-       alert('You Win, now go to the next level')
+      document.all.myText01.value = 'You obtained a Greatball!'  
+       alert('You obtained a Greatball! Now click OK because I told you to')
       document.getElementById('myImg01').style.left = '20px'
       location = 'https://youtu.be/dQw4w9WgXcQ'
    }
