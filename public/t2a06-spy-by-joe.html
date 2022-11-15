@@ -1,31 +1,70 @@
 <i><a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br></i>
 
 <h1>T2A06-Spy-Joe.html</h1>
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+    <textarea id="myArea01" rows=4 cols=70>Im Joe</textarea><br> 
 
 
-<input type=button value="encrypt" onclick="{
-   let myTemp = ''
-   myString = document.getElementById('myArea01').value.toLowerCase().split('')
-   for (let myLoop=0;   myLoop < myString.length; myLoop++){
-      myTemp = myString[myLoop]
-      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
-      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
-      myString[myLoop] = myTemp
-   }
-   document.getElementById('myArea02').value = myString.join('')
-}"><br><br>
+    <input type=button value="encrypt" onclick="{
+       let myTemp = ''
+       myString = document.getElementById('myArea01').value.toLowerCase().split('')
+       for (let myLoop=0;   myLoop < myString.length; myLoop++){
+          myTemp = myString[myLoop]
+          if (myString[myLoop] == 'e') {myTemp  = 'f'} 
+          if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+          myString[myLoop] = myTemp
+       }
+       document.getElementById('myArea02').value = myString.join('')
+    }"><br><br>
+    
+    
+    <textarea id="myArea02" rows=4 cols=70></textarea><br>
 
+    <input type=button value="decrypt" onclick="{
+       let myTemp = ''
+       myString = document.getElementById('myArea02').value.toLowerCase().split('')
+       for (let myLoop=0;   myLoop < myString.length; myLoop++){
+          myTemp = myString[myLoop]
+            if (myString[myLoop] == 'f') {myTemp  = 'e'}
+            if (myString[myLoop] == 'i') {myTemp  = 'h'}
+            myString[myLoop] = myTemp
+       }
+         document.getElementById('myArea03').value = myString.join('')
+    }"><br><br>
 
+        
+    <textarea id="myArea03" rows=4 cols=70></textarea><br> 
+    
+    <h1>Encrption done with base64 </h1>
+    
+    <script>
+        // base64 encoded text is in the text box below
+        var base64 = "SGVsbG8gV29ybGQh";
+        // decode the base64 encoded text
+        var text = atob(base64);
+        // display the decoded text
+        document.write();
 
-<textarea id="myArea02" rows=4 cols=70></textarea><br> 
+    </script>
 
-<input type=button value="decrypt" onclick="{
-   alert('This does not work at the moment')
-}"><br><br>
-
-
-<textarea id="myArea03" rows=4 cols=70></textarea><br>
+    <textarea id="base64" rows="10" cols="50"></textarea>
+    <button onclick="encode()">Encypt</button>
+    <button onclick="decode()">Decyrpt</button>
+    <script>
+        function encode() {
+            var text = document.getElementById("base64").value;
+            var base64 = btoa(text);
+            document.getElementById("base64").value = base64;
+        }
+        function decode() {
+            // get the base64 encoded text
+            var base64 = document.getElementById("base64").value;
+            // decode the base64 encoded text
+            var text = atob(base64);
+            // display the decoded text in a div element with id="result"
+            document.getElementById("base64").value = text;
+        }
+    </script>
+    <div id="result"></div> 
 
 <style> 
 
