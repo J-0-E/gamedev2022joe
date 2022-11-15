@@ -1,0 +1,79 @@
+<i><a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br></i>
+
+<h1>T2A06-Spy-Joe.html</h1>
+<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+
+
+<input type=button value="encrypt" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
+      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea02').value = myString.join('')
+}"><br><br>
+
+
+
+<textarea id="myArea02" rows=4 cols=70></textarea><br> 
+
+<input type=button value="decrypt" onclick="{
+   alert('This does not work at the moment')
+}"><br><br>
+
+
+<textarea id="myArea03" rows=4 cols=70></textarea><br>
+
+<style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  
+  body {
+    
+  
+font-family: 'Orbitron', sans-serif; 
+    font-size: 50px;
+    background-color: black;
+       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
+    
+    color: #383838;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #636363;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
+  
+  
+  
+  </style> 
+
+</body>
