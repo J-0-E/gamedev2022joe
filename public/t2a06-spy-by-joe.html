@@ -24,8 +24,8 @@
        myString = document.getElementById('myArea02').value.toLowerCase().split('')
        for (let myLoop=0;   myLoop < myString.length; myLoop++){
           myTemp = myString[myLoop]
-            if (myString[myLoop] == 'es') {myTemp  = 'e'}
-            if (myString[myLoop] == 'am') {myTemp  = 'o'}
+            if (myString[myLoop] == 's') {myTemp  = 'e'}
+            if (myString[myLoop] == 'm') {myTemp  = 'o'}
             myString[myLoop] = myTemp
        }
          document.getElementById('myArea03').value = myString.join('')
