@@ -20,7 +20,7 @@
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
    
-<input type=button value="Auto Background Left Too Slow" onclick="{
+<input type=button value="Auto Background Left Slow" onclick="{
   clearInterval(myClock)
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
@@ -28,7 +28,7 @@
     
 }">   
    
-<input type=button value="Auto Background Left Slow" onclick="{
+<input type=button value="Auto Background Left Too Slow" onclick="{
   clearInterval(myClock)
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
@@ -44,14 +44,6 @@
     
 }">
 
-<input type=button value="Auto Background Left Too Fast" onclick="{
-  clearInterval(myClock)
-  myClock = setInterval(function(){
-     document.getElementById('myButton01').click() 
-  }, -1000)
-    
-}">   
-  
 <input type=button value="Rat Right" onclick="{
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 30 + 'px'
 }">
