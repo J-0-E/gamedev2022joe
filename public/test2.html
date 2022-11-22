@@ -21,7 +21,7 @@
             y: 0,
             width: 10,
             height: 10,
-            color: "black"
+            color: "blue"
         };
 
         var enemies = [];
@@ -164,7 +164,7 @@
                 y: Math.random() * canvas.height,
                 width: 60,
                 height: 60,
-                color: "red",
+                color: "black",
                 xSpeed: Math.random() * enemySpeed - enemySpeed / 2,
                 ySpeed: Math.random() * enemySpeed - enemySpeed / 2
             };
@@ -178,7 +178,7 @@
                 y: player.y + player.height / 2,
                 width: 10,
                 height: 10,
-                color: "red",
+                color: "white",
                 xSpeed: Math.cos(player.angle) * bulletSpeed,
                 ySpeed: Math.sin(player.angle) * bulletSpeed
             };
@@ -238,8 +238,8 @@
             player = {
                 x: canvas.width / 2,
                 y: canvas.height / 2,
-                width: 60,
-                height: 60,
+                width: 10,
+                height: 10,
                 color: "black",
                 angle: 0
             };
@@ -258,7 +258,7 @@
                 player.angle = Math.atan2(e.clientY - rect.top - player.y - player.height / 2, e.clientX - rect.left - player.x - player.width / 2);
             });
 
-            document.addEventListener("mousehold", function (e) {
+            document.addEventListener("mousedown", function (e) {
                 spawnBullet();
             });
 
