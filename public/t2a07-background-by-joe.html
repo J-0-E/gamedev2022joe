@@ -35,7 +35,15 @@
   }, -100)
     
 }">
-   
+
+<input type=button value="Auto Background Left Too Fast" onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){
+     document.getElementById('myButton01').click() 
+  }, -200)
+    
+}">   
+  
 <input type=button value="Rat Right" onclick="{
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 30 + 'px'
 }">
