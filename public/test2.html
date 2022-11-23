@@ -164,7 +164,7 @@
                 y: Math.random() * canvas.height,
                 width: 60,
                 height: 60,
-                color: "black",
+                color: "red",
                 xSpeed: Math.random() * enemySpeed - enemySpeed / 2,
                 ySpeed: Math.random() * enemySpeed - enemySpeed / 2
             };
@@ -176,8 +176,8 @@
             var bullet = {
                 x: player.x + player.width / 2,
                 y: player.y + player.height / 2,
-                width: 60,
-                height: 60
+                width: 10,
+                height: 10,
                 color: "black",
                 xSpeed: Math.cos(player.angle) * bulletSpeed,
                 ySpeed: Math.sin(player.angle) * bulletSpeed
@@ -240,7 +240,7 @@
                 y: canvas.height / 2,
                 width: 60,
                 height: 60,
-                color: "black",
+                color: "blue",
                 angle: 0
             };
 
