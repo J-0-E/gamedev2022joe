@@ -6,7 +6,7 @@
 
    let myGlobalX = 0
    let myClock
-   let myScore = 3
+   let myScore = 1
 
 
    // global functions here
@@ -33,25 +33,25 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg02'  
+      document.all.myText01.value = 'You need a Pokeman'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
-       //alert('You used Cut but failed')
+       //alert('You cannot fight without a pokeman')
       document.getElementById('myImg01').style.left = '20px'
-      document.all.myText01.value = 'You hit myImg03'  
+      document.all.myText01.value = 'You need a Pokeman'  
       myScore -= 1
    }   
    
-  // you LOSE refresh the page
+  // You need pokeman to fight
    if (myScore <= 0){
     document.all.myText01.value = 'You Lose scrore at zero!'  
     alert('Sorry you lose')
     location.reload()
    }
 
-   // YOU WIN and go to next level!
+   // You got a greatball!
 
    if ( myHitOther('myImg01','myImg04') ){
       document.all.myText01.value = 'You obtained a Greatball!'  
