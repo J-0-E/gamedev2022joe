@@ -1,7 +1,18 @@
+
+<body id=mainbody>
 <b id="myB1" style="color:black; background-Color:white; "> You sent out Majikcarp! </b> <br>
+
 <b id="myB1" style="color:black; background-Color:white; "> What attack will you use? </b> 
-<input type=button value="Quick Attack" onClick="{ location = 'https://www.youtube.com/embed/-ZGlaAxB7nI' }">
-<input type=button value="Taunt" onClick="{ location = 'https://www.youtube.com/embed/-ZGlaAxB7nI' }">
+
+<p id='demo1' style='display: none'>You used Quick Attack but missed!</p>     
+<button type='button' onclick="toggleText()">Quick Attack</button>
+
+<p id='demo' style='display: none'>You used Taunt but failed!</p>     
+<button type='button' onclick="toggleText()">Taunt</button>
+
+<input type=button value="End Turn?" onClick="{ document.getElementById('mainbody').style.background-image = 'https://th.bing.com/th/id/R.eeb6c4995054472b46f149217f4f9771?rik=9a3pw03YFtfJyw&riu=http%3a%2f%2f25.media.tumblr.com%2f17d44e2a3da264785a406c796cadfee0%2ftumblr_mgb1pabo5c1r3ifxzo1_500.gif&ehk=8DNB6RX5FRII85LyxTXFpbXiygIS2MOny53MolOM75w%3d&risl=&pid=ImgRaw&r=0' }">
+
+}">
 
 <style>
  
