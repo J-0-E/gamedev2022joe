@@ -1,53 +1,7 @@
 <i><a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br></i>
 <h1 align=center>t2a12 Sort by Joe</h1>
 <script>
- var numbers = [];
-    function init(){      
-        document.getElementById("reset").disabled = true;      
-        document.getElementById("sort").disabled = true;
-    }
-    function generateNumbers() {    
-        document.getElementById("result").innerHTML = "Numbers have been generated";
-        document.getElementById("generate").disabled = true;        
-        document.getElementById("sort").disabled = false;
-        for (var i = 0; i < 20; i++) {
-            numbers[i] = Math.floor(Math.random() * 52);           
-            document.getElementById("numbers").innerHTML += numbers[i] + "<br>";           
-            numbers[i] = numbers[i];
-        }
-        return numbers;
-    }
-    function sortNumbers() {      
-        document.getElementById("result").innerHTML = "Numbers have been sorted";    
-        document.getElementById("sort").disabled = true;      
-        document.getElementById("reset").disabled = false;
-        numbers.sort(function (a, b) {
-            return a - b;
-        });
-        for (var i = 0; i < numbers.length; i++) {
-            document.getElementById("sortedNumbers").innerHTML += numbers[i] + "<br>";
-        }             
-    }
-    function reset() {
-        numbers = [];
-        document.getElementById("numbers").innerHTML = "";
-        document.getElementById("sortedNumbers").innerHTML = "";
-        document.getElementById("generate").disabled = false;
-        document.getElementById("sort").disabled = true;
-        document.getElementById("reset").disabled = true;
-        document.getElementById("result").innerHTML = "Numbers Have Been Reset";
-    }
-</script>
-<p id="result">Click Generate Numbers To Start</p>
-<body onload="init()"></body>
-<button id="generate" onclick="generateNumbers()">Generate Numbers</button>
-<button id="sort" onclick="sortNumbers()">Sort Numbers</button> 
-<button id="reset" onclick="reset()">Reset</button>
-<BR> <BR> <BR>  
-<div id="numbers"></div>
-<div id="sortedNumbers"></div>
-<div id="myDiv01"></div>
-   
+
 <style> 
 
   
