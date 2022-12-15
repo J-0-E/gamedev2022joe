@@ -1,48 +1,165 @@
-<i><a href="https://github.com/J-0-E/gamedev2022joe">Adrien's Git Thingy </a><br></i>
-<h1 align=center>t2a12 Sort by Joe</h1>
-<script>
+<html>
+  <head>
+    <style>
 
-<style> 
 
-  
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-  
-  body {
-    
-  
-font-family: 'Orbitron', sans-serif; 
-    font-size: 50px;
-    background-color: black;
-       background-image: url(https://i.pinimg.com/originals/a8/67/35/a867358d064dba73de18899a1d96bbd4.jpg);
-    
-    color: #383838;
+     body {
+        
     text-align: center;
-background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    overflow: hidden;
+  background-color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
-  }
-  
-  a {
-    color: #636363;
-  }
-  
-  a:hover {
-    color: white;
-  } 
-  
-  
-  h1 {
+}
 
-    text-align: center;
-    padding-top: 60px;
+h1 {
+    animation: seziure 1s infinite;
+}
 
-  
-  }
+ul {
+    animation: seziure 1s infinite;
+    list-style: none;
+   
+ 
+}
 
+li {
+  /* existing styles */
+  animation: seziure 1s infinite;
 
   
-  .background-image {
-    filter: blur(2px);
-    -webkit-filter: blur(8px);
+}
+
+
+li:hover {
+  /* existing styles */
+
+  transform: scale(1.8);
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+
+
+
+button {
+  background-color: #ffb3d9; /* a modern pink */
+  color: #fff2e6; /* a bright, modern yellow */
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes seziure {
+    0% {
+        color: red;
+        transition: 0.3s all;
+    }
+
+    25% {
+        color: greenyellow
+    }
+
+    50% {
+        color: white
+    }
+    75% {
+        color: aqua
+    }
+    100% {
+        color: orange
+    }
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Random Numbers</h1>
+    <ul id="numbers">
+    </ul><br> <br> <br>
+    <button id="ascending">Sort in Ascending Order</button> <br> <br> <br>
+    <button id="descending">Sort in Descending Order</button> <br> <br> <br> 
+    <button  onclick="{
+        location.reload()
+        }"> New Numbers</button>
+    <script>
+      // Generate 20 random numbers
+      var numbers = [];
+      for (var i = 0; i < 20; i++) {
+        // Generate a random number between 1 and 100
+        var randomNumber = Math.floor(Math.random() * 100) + 1;
+        numbers.push(randomNumber);
+      }
+
+      // Get a reference to the <ul> element
+      var numbersList = document.getElementById("numbers");
+
+      // Loop through the numbers array and add each number
+      // as a new <li> element to the <ul>
+      for (var i = 0; i < numbers.length; i++) {
+        var li = document.createElement("li");
+        li.textContent = numbers[i];
+        numbersList.appendChild(li);
+      }
+
+      // Get references to the buttons
+      var ascendingButton = document.getElementById("ascending");
+      var descendingButton = document.getElementById("descending");
+
+      // Add event listeners to the buttons
+      ascendingButton.addEventListener("click", sortAscending);
+      descendingButton.addEventListener("click", sortDescending);
+
+      // Define functions for sorting the numbers in ascending and descending order
+      function sortAscending() {
+        // Sort the numbers in ascending order
+        numbers.sort(function(a, b) {
+          return a - b;
+        });
+
+        // Clear the <ul> element
+        numbersList.innerHTML = "";
+
+        // Loop through the sorted numbers array and add each number
+        // as a new <li> element to the <ul>
+        for (var i = 0; i < numbers.length; i++) {
+          var li = document.createElement("li");
+          li.textContent = numbers[i];
+          numbersList.appendChild(li);
+        }
+      }
+
+      function sortDescending() {
+        // Sort the numbers in descending order
+        numbers.sort(function(a, b) {
+          return b - a;
+        });
+
+        // Clear the <ul> element
+        numbersList.innerHTML = "";
+
+        // Loop through the sorted numbers array and add each number
+        // as a new <li> element to the <ul>
+        for (var i = 0; i < numbers.length; i++) {
+          var li = document.createElement("li");
+          li.textContent = numbers[i];
+          numbersList.appendChild(li);
+        }
+      }
+
+
+    </script>
+  </body>
+</html
