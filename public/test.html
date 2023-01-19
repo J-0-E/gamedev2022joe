@@ -253,10 +253,7 @@
             document.addEventListener("mousemove", function (e) {
                 var rect = canvas.getBoundingClientRect();
 
-                player.angle = Math.atan2(e.clientY - rect.top - player.y - player.height / 2, e.clientX - rect.left - player.x - player.width / 2);
-            });
-
-            document.addEventListener("mousedown", function (e) {
+                player.angle = Mat 
                 spawnBullet();
             });
 
