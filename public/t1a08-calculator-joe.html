@@ -1,0 +1,128 @@
+  #calculator {
+            background-color: #95989b;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 22%;
+            -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 19px 34px 18px rgba(0,0,0,0.38); 
+box-shadow: 0px 10px 13px -7px #000000, 0px 19px 34px 18px rgba(0,0,0,0.38);
+        }
+        button {
+            margin: 5px;
+        }
+        .btn-group{
+            width: 100%;
+        }
+        button:active {
+            transform: scale(1.1);
+        }
+        body{
+            background-color: #353535;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="calculator" class="card">
+            <div class="card-header">
+              
+            </div>
+            <div class="card-body">
+                Q: <input type="text" id="history" class="form-control mb-2" disabled>
+                A:<input type="text" id="display" class="form-control mb-2" disabled>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('+')">+</button>
+                </div>
+                <div class="btn-group mt-2">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('4')">4</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('5')">5</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('6')">6</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('-')">-</button>
+                </div>
+                <div class="btn-group mt-2">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('7')">7</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('8')">8</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('9')">9</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('*')">*</button>
+                </div>
+                <div class="btn-group mt-2">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn btn-secondary" onclick="clearDisplay()">C</button>
+                    <button class="btn btn-secondary" onclick="calculateResult()">=</button>
+                    <button class="btn btn-secondary" onclick="appendToDisplay('/')">/</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const displayElement = document.getElementById('display')
+        const historyElement = document.getElementById('history')
+        function appendToDisplay(number){
+            displayElement.value += number;
+        }
+        function calculateResult(){
+            try {
+                const result = eval(document.getElementById('display').value);
+            historyElement.value = displayElement.value;
+                document.getElementById('display').value = result;
+        } catch (error){
+            const result = 'error'
+            historyElement.value = displayElement.value;
+                document.getElementById('display').value = result;
+        }
+    }
+        function clearDisplay(){
+            displayElement.value = ""
+            historyElement.value = "cleared"
+        }
+    </script>
+
+  <style> 
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+  
+  body {
+    
+  
+font-family: 'Oswald', sans-serif; 
+    font-size: 30px;
+    background-color: black;
+       background-image: url(https://i.ytimg.com/vi/xzMBzDdCp2o/maxresdefault.jpg);
+    
+    color: white;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
+  
+  a {
+    color: #white;
+  }
+  
+  a:hover {
+    color: white;
+  } 
+  
+  
+  h1 {
+
+    text-align: center;
+    padding-top: 60px;
+
+  
+  }
+
+
+  
+  .background-image {
+    filter: blur(2px);
+    -webkit-filter: blur(8px);
+  }
+       </style>
